@@ -2,7 +2,7 @@ import os
 import sys
 from system_a.generate_symbolic_blueprint import generate_symbolic_blueprint
 from system_b.recomposer import recombine_from_blueprint
-from system_c.validator_module import validate_output
+from system_c.validator_module.py import validate_output
 
 from system_c.popeye import florentine_score
 
