@@ -11,7 +11,7 @@ import pandas as pd
 from sklearn.metrics import mean_squared_error
 import numpy as np
 
-def validate_data(original_df, synthetic_df, threshold=0.05):
+def validate_output(original_df, synthetic_df, threshold=0.05):
     """
     Validates the statistical similarity of synthetic data to the original.
     Returns a diagnostic report and validation status.
