@@ -46,3 +46,4 @@ def validate_output(original_df, synthetic_df, threshold=0.05):
 # Placeholder for repair signaling
 def signal_repair(source, issues):
     print(f"Signaling {source} to revise based on issues: {issues}")
+__all__ = ["validate_output"]
