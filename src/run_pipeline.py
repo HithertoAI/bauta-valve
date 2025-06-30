@@ -9,7 +9,8 @@ from system_c.popeye import compute_florentine_score as florentine_score
 def run_bauta_valve_pipeline(input_csv, blueprint_path, synthetic_output_path):
     print("Step 1: Generating symbolic blueprint...")
     blueprint = generate_symbolic_blueprint(input_csv)
-    print(f"✓ Blueprint saved to {blueprint_path}")
+    with open(blueprint_path, "w") as f:
+    json.dump(blueprint, f, indent=2)
 
     print("Step 2: Reconstructing synthetic data from blueprint...")
     recombine_from_blueprint(blueprint_path, synthetic_output_path)
